@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Message</title>
+</head>
+<body>
+  <button onclick="sendMessage()">Click to Send Love Message</button>
+
+  <script>
+    function sendMessage() {
+      const message = "Aima, I love you so much! Every moment with you fills my heart with joy, and I can't imagine a life without you. You mean the world to me, and I will cherish you always.";
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+</body>
+</html>
