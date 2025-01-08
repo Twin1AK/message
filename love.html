@@ -3,16 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Love Message</title>
+  <title>Love Message for Aima</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #fff;
+      text-align: center;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    button {
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #e05241;
+    }
+  </style>
 </head>
 <body>
-  <button onclick="sendMessage()">Click to Send Love Message</button>
+  <div class="container">
+    <h1>Dear Aima</h1>
+    <p>
+      I love you so much! Every moment with you fills my heart with joy. 
+      You are my everything, and I will cherish you forever.
+    </p>
+    <button onclick="sendMessage()">Click to Send on WhatsApp</button>
+  </div>
 
   <script>
     function sendMessage() {
       const message = "Aima, I love you so much! Every moment with you fills my heart with joy, and I can't imagine a life without you. You mean the world to me, and I will cherish you always.";
       const encodedMessage = encodeURIComponent(message);
-      const whatsappUrl = `https://wa.me/?text=${encodedMessage}`;
+      
+      // Replace the number below with the specific WhatsApp number (include the country code, e.g., "923001234567").
+      const phoneNumber = "+923374840966"; 
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
       window.open(whatsappUrl, '_blank');
     }
   </script>
